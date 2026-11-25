@@ -1,0 +1,21 @@
+# Zugangsdaten niemals ins Repository
+.env
+.env.*
+!.env.example
+
+# Doppelte Projektregeln: nur CLAUDE.md gilt
+AGENTS.md
+
+# Lokale Einstellungen von Claude Code
+.claude/settings.local.json
+
+# Betriebssystem und Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Abhängigkeiten und Logs
+node_modules/
+*.log
