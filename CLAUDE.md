@@ -35,6 +35,7 @@ Kurz und freundlich, Kunden mit „du“ ansprechen.
 - Schriften: `website/fonts/`
 - Produktseiten: `website/produkte/`
 - Warenkorb: `website/warenkorb.html`
+- Favicon: `website/icons/` (SVG als Vorlage, PNGs daraus erzeugt; auf jeder Seite im `<head>` eingebunden)
 
 ## Mehrere Seiten
 - Dateinamen klein, mit Bindestrich, Umlaute ausgeschrieben (ä → ae, ö → oe, ü → ue, ß → ss), keine Sonderzeichen. Beispiel: `trekkingstoecke-skarv.html`.
