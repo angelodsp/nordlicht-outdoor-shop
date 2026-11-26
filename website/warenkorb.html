@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; font-src 'self'; img-src data:">
+<meta name="description" content="Dein Warenkorb bei Nordlicht Outdoor. Demo-Shop: Es wird nichts bestellt und nichts bezahlt.">
+<title>Warenkorb – Nordlicht Outdoor</title>
+<!-- Nordlicht Outdoor · Warenkorb · Inhalt kommt aus dem localStorage und wird von js/app.js gezeichnet. -->
+<link rel="stylesheet" href="css/style.css">
+<script src="js/app.js" defer></script>
+</head>
+<body id="top">
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="demo" role="note">Demo-Shop: keine echten Bestellungen</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Nordlicht Outdoor, Startseite"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M2 27 12 9l6 10 4-6 8 14z"/><path d="M6 6c4 3 8 3 12 0" stroke="#8FE3C8"/></svg>Nordlicht Outdoor</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="hauptnav" hidden>Menü</button>
+    <nav id="hauptnav" aria-label="Hauptnavigation" data-nav>
+      <ul>
+        <li><a href="index.html#produkte">Produkte</a></li>
+        <li><a href="index.html#packliste">Packliste</a></li>
+        <li><a href="index.html#ueber-uns">Über uns</a></li>
+        <li><a href="index.html#service">Service</a></li>
+      </ul>
+    </nav>
+    <a class="cart" href="warenkorb.html" aria-current="page" aria-label="Warenkorb, 0 Artikel"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg><span class="cart-text">Warenkorb</span><span class="cart-count" data-cart-count>0</span></a>
+  </div>
+</header>
+
+<main id="inhalt">
+  <div class="wrap">
+    <nav class="brotkrumen" aria-label="Brotkrumen">
+      <ol>
+        <li><a href="index.html">Startseite</a></li>
+        <li aria-current="page">Warenkorb</li>
+      </ol>
+    </nav>
+
+    <section class="warenkorb" data-cart-page aria-labelledby="wk-titel">
+      <h1 id="wk-titel" tabindex="-1">Dein Warenkorb</h1>
+
+      <p class="wk-hinweis" data-cart-nojs>Der Warenkorb braucht JavaScript. Bitte aktiviere es in deinem Browser.</p>
+
+      <div class="wk-raster" data-cart-filled hidden>
+        <div>
+          <p class="wk-preise">Alle Preise inkl. MwSt., zzgl. Versand.</p>
+          <ul class="wk-liste" data-cart-list aria-label="Artikel im Warenkorb"></ul>
+        </div>
+        <div class="wk-kasse">
+          <h2>Übersicht</h2>
+          <p class="wk-total"><span>Summe</span><strong data-cart-total>0,00&nbsp;€</strong></p>
+          <p class="wk-mwst">inkl. MwSt., zzgl. Versand</p>
+          <p class="wk-versand">Versand 4,90&nbsp;€, ab 50&nbsp;€ Bestellwert kostenlos.</p>
+          <button class="btn gross block" type="button" data-cart-order>Demo-Bestellung absenden</button>
+          <p class="wk-demo">Demo-Shop: Es wird nichts bestellt, nichts bezahlt und nichts gesendet.</p>
+        </div>
+      </div>
+
+      <div class="wk-leer" data-cart-empty hidden>
+        <p>Dein Warenkorb ist leer.</p>
+        <a class="btn" href="index.html#produkte">Zu den Produkten</a>
+      </div>
+
+      <div class="wk-bestaetigung" data-cart-done tabindex="-1" hidden>
+        <h2>Danke!</h2>
+        <p>Das war nur eine Demo-Bestellung. Es wurde nichts bestellt und nichts bezahlt. Dein Warenkorb ist jetzt leer.</p>
+        <a class="btn" href="index.html#produkte">Weiter stöbern</a>
+      </div>
+    </section>
+
+    <a class="textlink zurueck" href="index.html#produkte"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Weiter einkaufen</a>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap fuss">
+    <div>
+      <a class="logo" href="index.html" aria-label="Nordlicht Outdoor, Startseite"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M2 27 12 9l6 10 4-6 8 14z"/><path d="M6 6c4 3 8 3 12 0" stroke="#8FE3C8"/></svg>Nordlicht Outdoor</a>
+      <p>Ausrüstung für Tagestouren. Ein Demo-Shop, alle Daten sind erfunden.</p>
+    </div>
+    <div><h3>Seite</h3><ul><li><a href="index.html#produkte">Produkte</a></li><li><a href="index.html#packliste">Packliste</a></li><li><a href="index.html#ueber-uns">Über uns</a></li></ul></div>
+    <div><h3>Service</h3><ul><li><a href="index.html#service">Versand</a></li><li><a href="index.html#service">Rückgabe</a></li><li><a href="index.html#service">Kontakt</a></li></ul></div>
+    <div><h3>Rechtliches</h3><ul><li><a href="#">Impressum (Platzhalter)</a></li><li><a href="#">Datenschutz (Platzhalter)</a></li></ul></div>
+  </div>
+  <div class="fuss-unten">
+    <div class="wrap"><span>© 2026 Nordlicht Outdoor (Demo-Shop, alle Daten erfunden)</span><a class="hoch" href="#top">Nach oben ↑</a></div>
+  </div>
+</footer>
+</body>
+</html>

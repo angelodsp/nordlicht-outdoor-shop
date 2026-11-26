@@ -34,6 +34,7 @@ Kurz und freundlich, Kunden mit „du“ ansprechen.
 - JavaScript: `website/js/app.js`
 - Schriften: `website/fonts/`
 - Produktseiten: `website/produkte/`
+- Warenkorb: `website/warenkorb.html`
 
 ## Mehrere Seiten
 - Dateinamen klein, mit Bindestrich, Umlaute ausgeschrieben (ä → ae, ö → oe, ü → ue, ß → ss), keine Sonderzeichen. Beispiel: `trekkingstoecke-skarv.html`.
@@ -43,6 +44,16 @@ Kurz und freundlich, Kunden mit „du“ ansprechen.
 - Produktdaten stehen fest im HTML, keine Datendatei. Name, Preis und `data-*`-Attribute auf Karte und Produktseite müssen übereinstimmen.
 - Jede Unterseite hat einen sichtbaren Weg zurück zur Übersicht.
 - Neue Seiten werden von der Startseite aus verlinkt.
+
+## Warenkorb
+- Gespeichert nur im `localStorage` unter dem Schlüssel `nordlicht-warenkorb`, nur Artikel (`id`, `name`, `preisCent`, `menge`), nie persönliche Daten.
+- Erst beim ersten Hineinlegen speichern. Ist der Warenkorb leer, wird der Schlüssel gelöscht.
+- Name und Preis kommen aus den `data-*`-Attributen am `[data-product]`-Element. Keine Produktliste im JavaScript.
+- Rechnen nur in ganzen Cent. Anzeige mit `Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' })`, z. B. „19,99 €“.
+- Daten aus dem Speicher vor der Nutzung prüfen und nur mit `textContent` anzeigen, nie als HTML.
+- Rückmeldungen über die gemeinsame Meldung mit `role="status"`, damit Screenreader sie ansagen.
+- Keine zusätzlichen Pakete oder Bibliotheken.
+- Die Demo-Bestellung sendet nie Daten, sie zeigt nur eine Bestätigung und leert den Warenkorb.
 
 ## Sicherheit
 API-Schlüssel, Passwörter und Zugangsdaten nie in den Code, sondern nur in eine `.env`-Datei, die in `.gitignore` steht.

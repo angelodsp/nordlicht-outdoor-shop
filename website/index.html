@@ -9,12 +9,12 @@
 <!--
   Nordlicht Outdoor · Startseite · Entwurf v2 (24.11.2026)
   Demo-Shop für den Kurs: Alle Produkte, Preise und Daten sind erfunden.
-  Nur HTML und CSS. Andockpunkte für JavaScript (Mittwoch):
-  - data-cart-count   Zähler im Warenkorb-Button
-  - data-add-to-cart  Buttons in den Produktkarten; Daten am Artikel: data-id, data-name, data-price, data-category
-  Startseite plus eine Seite je Produkt in produkte/. Die Navigation springt zu den Abschnitten dieser Seite,
-  der Produktname in jeder Karte verlinkt auf die Produktseite.
-  - data-nav          Navigation, später als Menü fürs Handy
+  Startseite plus eine Seite je Produkt in produkte/ und warenkorb.html. Die Navigation springt zu den
+  Abschnitten dieser Seite, der Produktname in jeder Karte verlinkt auf die Produktseite.
+  Andockpunkte für js/app.js:
+  - data-nav          Navigation, auf dem Handy als aufklappbares Menü
+  - data-cart-count   Zähler im Warenkorb-Link, zeigt die Anzahl aus dem localStorage
+  - data-add-to-cart  Button "In den Warenkorb"; liest data-id, data-name, data-price vom umgebenden [data-product]
 -->
 <link rel="stylesheet" href="css/style.css">
 <script src="js/app.js" defer></script>
@@ -35,7 +35,7 @@
         <li><a href="#service">Service</a></li>
       </ul>
     </nav>
-    <a class="cart" href="#" aria-label="Warenkorb, 0 Artikel"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg><span class="cart-text">Warenkorb</span><span class="cart-count" data-cart-count>0</span></a>
+    <a class="cart" href="warenkorb.html" aria-label="Warenkorb, 0 Artikel"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg><span class="cart-text">Warenkorb</span><span class="cart-count" data-cart-count>0</span></a>
   </div>
 </header>
 
